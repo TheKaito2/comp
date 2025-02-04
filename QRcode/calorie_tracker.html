@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker - Smart Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calorie_tracker.html" class="active">Calorie Tracker</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" id="calorieTracker">
+        <h1>Calorie Tracker</h1>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <!-- Total Calories Card -->
+            <div class="stat-card">
+                <h3>Today's Calories</h3>
+                <div class="stat-content">
+                    <div class="stat-number">
+                        <span id="totalCalories">0</span>
+                        <span class="unit">cal</span>
+                    </div>
+                    <div class="progress-ring">
+                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <circle 
+                                class="progress-ring-bg" 
+                                cx="60" 
+                                cy="60" 
+                                r="54" 
+                                fill="none" 
+                                stroke="#e6e6e6" 
+                                stroke-width="12"
+                            />
+                            <circle 
+                                class="progress-ring-circle" 
+                                cx="60" 
+                                cy="60" 
+                                r="54" 
+                                fill="none" 
+                                stroke="#06402B" 
+                                stroke-width="12"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+                <p class="goal-text">Goal: <span id="dailyGoal">2000</span> cal</p>
+            </div>
+
+            <!-- Remaining Calories Card -->
+            <div class="stat-card">
+                <h3>Remaining</h3>
+                <div class="stat-content">
+                    <div class="stat-number">
+                        <span id="remainingCalories">2000</span>
+                        <span class="unit">cal</span>
+                    </div>
+                </div>
+                <p>calories left today</p>
+            </div>
+
+            <!-- Nutrients Card -->
+            <div class="stat-card">
+                <h3>Nutrients</h3>
+                <div class="nutrient-bars">
+                    <div class="nutrient-bar">
+                        <span class="nutrient-label">Protein</span>
+                        <div class="progress-bar">
+                            <div id="proteinProgress" class="progress" style="width: 0%"></div>
+                        </div>
+                        <span id="proteinAmount" class="amount">0g/50g</span>
+                    </div>
+                    <div class="nutrient-bar">
+                        <span class="nutrient-label">Carbs</span>
+                        <div class="progress-bar">
+                            <div id="carbsProgress" class="progress" style="width: 0%"></div>
+                        </div>
+                        <span id="carbsAmount" class="amount">0g/250g</span>
+                    </div>
+                    <div class="nutrient-bar">
+                        <span class="nutrient-label">Fat</span>
+                        <div class="progress-bar">
+                            <div id="fatProgress" class="progress" style="width: 0%"></div>
+                        </div>
+                        <span id="fatAmount" class="amount">0g/70g</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consumed Items Section -->
+        <div class="consumed-items-section">
+            <div class="section-header">
+                <h2>Consumed Items</h2>
+                <div class="date-filter">
+                    <button class="date-btn active" data-period="today">Today</button>
+                    <button class="date-btn" data-period="week">Week</button>
+                    <button class="date-btn" data-period="month">Month</button>
+                </div>
+            </div>
+
+            <div id="consumedItems" class="items-list">
+                <!-- Items will be dynamically added here -->
+            </div>
+
+            <div class="tracker-actions">
+                <button id="resetTracker" class="btn btn-warning">Reset Tracker</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

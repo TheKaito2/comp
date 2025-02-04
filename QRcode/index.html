@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="calorie_tracker.html">Calorie Tracker</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>Product List</h1>
+
+        <!-- Search and Filter Section -->
+        <div class="search-bar">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search products..."
+                aria-label="Search products"
+            >
+            <select id="categoryFilter" aria-label="Filter by category">
+                <option value="">All Categories</option>
+                <option value="snacks">Snacks</option>
+                <option value="beverages">Beverages</option>
+                <option value="instant_food">Instant Food</option>
+            </select>
+            <select id="sortProducts" aria-label="Sort products">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="price-asc">Price (Low to High)</option>
+                <option value="price-desc">Price (High to Low)</option>
+                <option value="calories-asc">Calories (Low to High)</option>
+            </select>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-container" id="productContainer">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

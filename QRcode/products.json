@@ -1,0 +1,324 @@
+{
+    "version": "1.0",
+    "lastUpdated": "2024-03-15",
+    "categories": [
+        {
+            "id": "snacks",
+            "name": "Snacks",
+            "description": "Quick and easy snack options"
+        },
+        {
+            "id": "beverages",
+            "name": "Beverages",
+            "description": "Refreshing drinks and beverages"
+        },
+        {
+            "id": "instant_food",
+            "name": "Instant Food",
+            "description": "Ready-to-eat meal options"
+        }
+    ],
+    "products": [
+        {
+            "id": "lays-001",
+            "name": "Lays Classic",
+            "description": "Classic potato chips with original flavor",
+            "category": "snacks",
+            "price": 20.00,
+            "calories": 150,
+            "stock": 100,
+            "status": "in_stock",
+            "nutrients": {
+                "protein": 2,
+                "carbs": 15,
+                "fat": 10,
+                "fiber": 1,
+                "sugar": 0
+            },
+            "nutritionalInfo": {
+                "servingSize": "30g",
+                "servingsPerContainer": 8,
+                "allergens": [
+                    "Potato",
+                    "Vegetable Oil",
+                    "May contain traces of milk"
+                ],
+                "ingredients": [
+                    "Potatoes",
+                    "Vegetable Oil",
+                    "Salt"
+                ]
+            },
+            "storage": {
+                "conditions": "Store in a cool, dry place",
+                "shelfLife": "6 months"
+            },
+            "packaging": {
+                "weight": "240g",
+                "dimensions": {
+                    "length": 20,
+                    "width": 15,
+                    "height": 5
+                },
+                "recyclable": true,
+                "recyclingInfo": "Plastic bag - Check local recycling guidelines",
+                "materials": ["Plastic", "Aluminum"]
+            },
+            "image": "/lays.jpg"
+        },
+        {
+            "id": "hanami-001",
+            "name": "Hanami Shrimp Chips (Original Flavor)",
+            "description": "Crispy shrimp-flavored chips",
+            "category": "snacks",
+            "price": 25.00,
+            "calories": 200,
+            "stock": 75,
+            "status": "in_stock",
+            "nutrients": {
+                "protein": 3,
+                "carbs": 18,
+                "fat": 12,
+                "fiber": 1,
+                "sugar": 1
+            },
+            "nutritionalInfo": {
+                "servingSize": "30g",
+                "servingsPerContainer": 6,
+                "allergens": [
+                    "Crustaceans (Shrimp)",
+                    "Wheat",
+                    "May contain traces of fish",
+                    "May contain traces of soy"
+                ],
+                "ingredients": [
+                    "Tapioca Starch",
+                    "Shrimp Powder",
+                    "Palm Oil",
+                    "Salt"
+                ]
+            },
+            "storage": {
+                "conditions": "Store in a cool, dry place",
+                "shelfLife": "8 months"
+            },
+            "packaging": {
+                "weight": "180g",
+                "dimensions": {
+                    "length": 18,
+                    "width": 12,
+                    "height": 4
+                },
+                "recyclable": true,
+                "recyclingInfo": "Plastic bag - Check local recycling guidelines",
+                "materials": ["Plastic"]
+            },
+            "image": "/hanami.jpg"
+        },
+        {
+            "id": "betagen-001",
+            "name": "Betagen (Probiotic Drink)",
+            "description": "Probiotic dairy drink for digestive health",
+            "category": "beverages",
+            "price": 15.00,
+            "calories": 120,
+            "stock": 150,
+            "status": "in_stock",
+            "nutrients": {
+                "protein": 5,
+                "carbs": 20,
+                "fat": 1,
+                "fiber": 0,
+                "sugar": 10
+            },
+            "nutritionalInfo": {
+                "servingSize": "180ml",
+                "servingsPerContainer": 1,
+                "allergens": [
+                    "Milk",
+                    "Contains live cultures"
+                ],
+                "ingredients": [
+                    "Milk",
+                    "Sugar",
+                    "Probiotic Cultures"
+                ],
+                "probiotics": "Live cultures: L. acidophilus, B. bifidum"
+            },
+            "storage": {
+                "conditions": "Keep refrigerated",
+                "shelfLife": "30 days",
+                "temperature": "4°C"
+            },
+            "packaging": {
+                "weight": "180ml",
+                "dimensions": {
+                    "length": 6,
+                    "width": 6,
+                    "height": 12
+                },
+                "recyclable": true,
+                "recyclingInfo": "Plastic bottle - Widely recyclable",
+                "materials": ["PET Plastic"]
+            },
+            "image": "/betagen.jpg"
+        },
+        {
+            "id": "meji-001",
+            "name": "Meji Chocolate Milk",
+            "description": "Rich and creamy chocolate flavored milk",
+            "category": "beverages",
+            "price": 30.00,
+            "calories": 180,
+            "stock": 100,
+            "status": "in_stock",
+            "nutrients": {
+                "protein": 4,
+                "carbs": 25,
+                "fat": 5,
+                "fiber": 1,
+                "sugar": 15
+            },
+            "nutritionalInfo": {
+                "servingSize": "200ml",
+                "servingsPerContainer": 1,
+                "allergens": [
+                    "Milk",
+                    "May contain traces of soy",
+                    "May contain traces of nuts"
+                ],
+                "ingredients": [
+                    "Milk",
+                    "Sugar",
+                    "Cocoa Powder",
+                    "Stabilizers"
+                ]
+            },
+            "storage": {
+                "conditions": "Keep refrigerated",
+                "shelfLife": "14 days",
+                "temperature": "4°C"
+            },
+            "packaging": {
+                "weight": "200ml",
+                "dimensions": {
+                    "length": 7,
+                    "width": 7,
+                    "height": 15
+                },
+                "recyclable": true,
+                "recyclingInfo": "Plastic bottle - Widely recyclable",
+                "materials": ["PET Plastic", "HDPE Cap"]
+            },
+            "image": "/milk.png"
+        },
+        {
+            "id": "coke-001",
+            "name": "coca-cola",
+            "description": "coke",
+            "category": "beverages",
+            "price": 12.00,
+            "calories": 330,
+            "stock": 200,
+            "status": "in_stock",
+            "nutrients": {
+                "protein": 7,
+                "carbs": 45,
+                "fat": 15,
+                "fiber": 2,
+                "sugar": 2
+            },
+            "nutritionalInfo": {
+                "servingSize": "60g",
+                "servingsPerContainer": 1,
+                "allergens": [
+                    ""
+                ],
+                "ingredients": [
+                    "Wheat Noodles",
+                    "Palm Oil",
+                    "Tom Yum Seasoning",
+                    "Creamer Powder"
+                ],
+                "spicyLevel": "Medium"
+            },
+            "storage": {
+                "conditions": "Store in a cool, dry place",
+                "shelfLife": "12 months"
+            },
+            "packaging": {
+                "weight": "60g",
+                "dimensions": {
+                    "length": 15,
+                    "width": 12,
+                    "height": 3
+                },
+                "recyclable": true,
+                "recyclingInfo": "Plastic wrapper - Check local recycling guidelines",
+                "materials": ["Plastic", "Paper"]
+            },
+            "image": "/coke.png"
+        },
+        {
+            "id": "mama-001",
+            "name": "Mama Instant Noodles (Tom Yum namkon)",
+            "description": "Spicy and creamy Tom Yum flavored instant noodles",
+            "category": "instant_food",
+            "price": 12.00,
+            "calories": 330,
+            "stock": 200,
+            "status": "in_stock",
+            "nutrients": {
+                "protein": 7,
+                "carbs": 45,
+                "fat": 15,
+                "fiber": 2,
+                "sugar": 2
+            },
+            "nutritionalInfo": {
+                "servingSize": "60g",
+                "servingsPerContainer": 1,
+                "allergens": [
+                    "Wheat",
+                    "Crustaceans (Shrimp)",
+                    "Soy",
+                    "May contain traces of fish",
+                    "May contain traces of egg"
+                ],
+                "ingredients": [
+                    "Wheat Noodles",
+                    "Palm Oil",
+                    "Tom Yum Seasoning",
+                    "Creamer Powder"
+                ],
+                "spicyLevel": "Medium"
+            },
+            "storage": {
+                "conditions": "Store in a cool, dry place",
+                "shelfLife": "12 months"
+            },
+            "packaging": {
+                "weight": "60g",
+                "dimensions": {
+                    "length": 15,
+                    "width": 12,
+                    "height": 3
+                },
+                "recyclable": true,
+                "recyclingInfo": "Plastic wrapper - Check local recycling guidelines",
+                "materials": ["Plastic", "Paper"]
+            },
+            "image": "/mama.jpg"
+        }
+    ],
+    "metadata": {
+        "totalProducts": 5,
+        "totalCategories": 3,
+        "currency": "THB",
+        "measurementUnits": {
+            "weight": "g",
+            "volume": "ml",
+            "dimensions": "cm"
+        }
+    }
+}

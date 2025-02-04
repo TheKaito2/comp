@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Smart Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calorie_tracker.html">Calorie Tracker</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="product-details">
+            <!-- Left Column: Product Image -->
+            <div class="product-image-section">
+                <div class="main-image">
+                    <img id="productImage" src="" alt=""height="690px"width="690px">
+                </div>
+            </div>
+
+            <!-- Right Column: Product Info -->
+            <div class="product-info-section">
+                <!-- Basic Info -->
+                <div class="product-header">
+                    <h1 id="productTitle" class="product-title"></h1>
+                    <div class="product-meta">
+                        <span class="product-id" id="productId"></span>
+                        <span class="product-category" id="productCategory"></span>
+                    </div>
+                </div>
+
+                <!-- Price and Stock -->
+                <div class="price-stock-section">
+                    <div class="price-box">
+                        <h2 class="price" id="productPrice"></h2>
+                        <span class="tax-note">Inclusive of all taxes</span>
+                    </div>
+                    <div class="stock-status" id="stockStatus">
+                        <span class="status-indicator"></span>
+                        <span class="status-text">In Stock</span>
+                    </div>
+                </div>
+
+                <!-- Nutrition Facts -->
+                <div class="nutrition-section">
+                    <h2>Nutrition Facts</h2>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item calories">
+                            <span class="label">Calories</span>
+                            <span class="value" id="calories"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="label">Protein</span>
+                            <span class="value" id="protein"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="label">Carbs</span>
+                            <span class="value" id="carbs"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="label">Fat</span>
+                            <span class="value" id="fat"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="label">Fiber</span>
+                            <span class="value" id="fiber"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="label">Sugar</span>
+                            <span class="value" id="sugar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add to Cart Section -->
+                <div class="action-section">
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrease" aria-label="Decrease quantity">-</button>
+                            <input 
+                                type="number" 
+                                id="quantity" 
+                                value="1" 
+                                min="1" 
+                                max="99"
+                                aria-label="Product quantity"
+                            >
+                            <button class="quantity-btn increase" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="addToCart" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal" id="cartSuccessModal" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Added to Cart</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="success-message">
+                    <svg class="success-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <p>Item has been added to your cart!</p>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary close-modal">Continue Shopping</button>
+                    <a href="cart.html" class="btn btn-primary">View Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add this after the nutrition-section div -->
+<div class="additional-info-section">
+    <!-- Allergen Information -->
+    <div class="info-box allergens-box">
+        <h2>Allergen Information</h2>
+        <div class="allergens-list" id="allergensList">
+            <!-- Allergens will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Packaging Information -->
+    <div class="info-box packaging-box">
+        <h2>Packaging Information</h2>
+        <div class="packaging-details">
+            <div class="packaging-item">
+                <span class="icon">♻️</span>
+                <span class="label">Recyclable:</span>
+                <span id="recyclable"></span>
+            </div>
+            <div class="packaging-item">
+                <span class="icon">📦</span>
+                <span class="label">Package Weight:</span>
+                <span id="packageWeight"></span>
+            </div>
+            <div class="packaging-item">
+                <span class="icon">📏</span>
+                <span class="label">Dimensions:</span>
+                <span id="packageDimensions"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
